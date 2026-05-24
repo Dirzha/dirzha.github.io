@@ -1,147 +1,295 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jasa Edit Video & Desain</title>
+<export default function CreativeAgencyWebsite() {
+  const services = [
+    "Edit Video Vlog",
+    "Video Short / Reels / TikTok",
+    "Edit Video Tugas Sekolah",
+    "Desain Pamflet",
+    "Edit Foto",
+    "Desain Poster",
+    "Brosur",
+    "PPT Presentasi",
+  ];
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
+  const portfolio = [
+    "Video Editing",
+    "Graphic Design",
+    "School Project",
+    "Social Media",
+  ];
 
-    body{
-      background:#111;
-      color:white;
-      line-height:1.6;
-    }
+  return (
+    <div className="bg-black text-white min-h-screen font-sans overflow-x-hidden scroll-smooth">
+      <div className="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-600/20 blur-3xl rounded-full"></div>
+        <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-500/20 blur-3xl rounded-full"></div>
+      </div>
 
-    header{
-      background:linear-gradient(135deg,#ff0055,#ff6600);
-      padding:40px 20px;
-      text-align:center;
-    }
+      <nav className="flex justify-between items-center px-6 md:px-16 py-6 backdrop-blur-md bg-white/5 border-b border-white/10 sticky top-0 z-50">
+        <h1 className="text-2xl font-bold tracking-wide bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+          Creative Edit
+        </h1>
 
-    header h1{
-      font-size:40px;
-      margin-bottom:10px;
-    }
+        <div className="hidden md:flex gap-8 text-sm text-gray-300">
+          <a href="#services" className="hover:text-white transition">
+            Layanan
+          </a>
+          <a href="#portfolio" className="hover:text-white transition">
+            Portofolio
+          </a>
+          <a href="#pricing" className="hover:text-white transition">
+            Harga
+          </a>
+          <a href="#contact" className="hover:text-white transition">
+            Kontak
+          </a>
+        </div>
+      </nav>
 
-    header p{
-      font-size:18px;
-    }
+      <section className="relative px-6 md:px-16 py-20 md:py-32 flex flex-col-reverse md:flex-row items-center justify-between gap-16">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-10"
+        >
+          <source src="VIDEO-KAMU.mp4" type="video/mp4" />
+        </video>
 
-    .container{
-      max-width:1000px;
-      margin:auto;
-      padding:30px 20px;
-    }
+        <div className="relative z-10 max-w-xl">
+          <span className="px-4 py-2 rounded-full bg-white/10 border border-white/10 text-sm text-gray-300 backdrop-blur-md">
+            Creative Freelancer Modern
+          </span>
 
-    .card{
-      background:#1e1e1e;
-      padding:25px;
-      border-radius:15px;
-      margin-bottom:25px;
-      box-shadow:0 0 10px rgba(255,255,255,0.1);
-    }
+          <h1 className="mt-6 text-5xl md:text-7xl font-bold leading-tight">
+            Jasa Edit Video &{" "}
+            <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+              Desain Modern
+            </span>
+          </h1>
 
-    h2{
-      color:#ff6600;
-      margin-bottom:15px;
-    }
+          <p className="mt-6 text-lg text-gray-300 leading-relaxed">
+            Bantu konten, tugas, dan desain kamu tampil lebih menarik,
+            aesthetic, dan profesional.
+          </p>
 
-    ul{
-      padding-left:20px;
-    }
+          <div className="flex flex-wrap gap-4 mt-8">
+            <button className="px-6 py-3 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 hover:scale-105 transition shadow-lg shadow-blue-500/30">
+              Lihat Portofolio
+            </button>
 
-    li{
-      margin-bottom:10px;
-    }
+            <button className="px-6 py-3 rounded-2xl border border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 transition">
+              Order Sekarang
+            </button>
+          </div>
 
-    .highlight{
-      color:#00ffb3;
-      font-weight:bold;
-    }
+          <p className="mt-6 text-sm text-gray-400">
+            Mulai dari under 100k sesuai jenis editan.
+          </p>
+        </div>
 
-    .btn{
-      display:inline-block;
-      margin-top:20px;
-      padding:12px 25px;
-      background:#ff0055;
-      color:white;
-      text-decoration:none;
-      border-radius:10px;
-      transition:0.3s;
-    }
+        <div className="relative z-10 animate-bounce">
+          <div className="absolute inset-0 bg-purple-500/30 blur-3xl rounded-full"></div>
 
-    .btn:hover{
-      background:#ff6600;
-    }
+          <div className="relative backdrop-blur-xl bg-white/10 border border-white/10 rounded-[40px] p-4 shadow-2xl shadow-purple-500/20">
+            <img
+              src="FOTO-KAMU.jpg"
+              alt="Owner"
+              className="w-[300px] md:w-[380px] h-[400px] md:h-[500px] object-cover rounded-[30px]"
+            />
+          </div>
+        </div>
+      </section>
 
-    footer{
-      text-align:center;
-      padding:20px;
-      background:#000;
-      margin-top:30px;
-      color:#aaa;
-    }
-  </style>
-</head>
-<body>
+      <section id="services" className="px-6 md:px-16 py-24">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-bold">Layanan</h2>
+          <p className="text-gray-400 mt-3">
+            Modern editing & design service
+          </p>
+        </div>
 
-  <header>
-    <h1>🎬 JASA EDIT VIDEO & DESAIN 🎨</h1>
-    <p>Konten Estetik • Fast Respon • Harga Pelajar</p>
-  </header>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-6 hover:-translate-y-2 hover:border-purple-500/40 transition duration-300 shadow-lg hover:shadow-purple-500/20"
+            >
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-2xl mb-5">
+                ✦
+              </div>
 
-  <div class="container">
+              <h3 className="text-lg font-semibold group-hover:text-purple-400 transition">
+                {service}
+              </h3>
+            </div>
+          ))}
+        </div>
+      </section>
 
-    <div class="card">
-      <h2>📌 Layanan Kami</h2>
-      <ul>
-        <li>Vlog</li>
-        <li>Video Short / TikTok / Reels</li>
-        <li>Pamflet</li>
-        <li>Edit Foto</li>
-        <li>Poster</li>
-        <li>Brosur</li>
-        <li>Video Tugas Sekolah</li>
-        <li>PPT Presentasi</li>
-      </ul>
+      <section id="portfolio" className="px-6 md:px-16 py-24">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-bold">Portofolio</h2>
+          <p className="text-gray-400 mt-3">
+            Preview hasil edit dan desain
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {portfolio.map((item, index) => (
+            <div
+              key={index}
+              className="relative overflow-hidden rounded-3xl h-80 group border border-white/10"
+            >
+              <img
+                src={`PORTFOLIO${index + 1}.jpg`}
+                alt={item}
+                className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+
+              <div className="absolute bottom-6 left-6">
+                <h3 className="text-xl font-semibold">{item}</h3>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="pricing" className="px-6 md:px-16 py-24">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-bold">Pricing</h2>
+          <p className="text-gray-400 mt-3">
+            Flexible pricing sesuai kebutuhan
+          </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6">
+          {["Basic", "Pro", "Premium"].map((plan, index) => (
+            <div
+              key={index}
+              className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-purple-500/40 transition"
+            >
+              <h3 className="text-2xl font-bold mb-4">{plan}</h3>
+
+              <div className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+                &lt; 100K
+              </div>
+
+              <ul className="space-y-3 text-gray-300">
+                <li>✓ Harga fleksibel sesuai tingkat kesulitan</li>
+                <li>✓ Pengerjaan mepet bisa</li>
+                <li>✓ Include revisi</li>
+                <li>✓ Boleh request sesuai kebutuhan</li>
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="px-6 md:px-16 py-24">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-bold">Testimoni</h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            "Editannya rapih banget dan cepat!",
+            "Desain aesthetic dan sesuai request.",
+            "Video tugas jadi jauh lebih keren.",
+          ].map((review, index) => (
+            <div
+              key={index}
+              className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-6 shadow-lg"
+            >
+              <p className="text-gray-300">“{review}”</p>
+
+              <div className="mt-4 text-sm text-purple-400">
+                Client {index + 1}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="px-6 md:px-16 py-24">
+        <div className="relative overflow-hidden rounded-[40px] p-12 text-center bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-white/10 backdrop-blur-xl">
+          <div className="absolute top-0 left-0 w-full h-full bg-black/20"></div>
+
+          <div className="relative z-10">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+              Siap bikin konten dan desain kamu jadi lebih keren?
+            </h2>
+
+            <button className="mt-8 px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 hover:scale-105 transition shadow-lg shadow-purple-500/30">
+              Hubungi Sekarang
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="px-6 md:px-16 py-24">
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-4xl font-bold mb-6">Contact</h2>
+
+            <div className="space-y-4 text-gray-300 text-lg">
+              <p>📱 WhatsApp: +62xxxxxxxxxx</p>
+              <p>📸 Instagram: @username</p>
+              <p>🎵 TikTok: @username</p>
+              <p>✉️ Email: emailkamu@gmail.com</p>
+            </div>
+
+            <div className="mt-8 text-purple-400 font-semibold">
+              Open 08:00 - 22:00
+            </div>
+          </div>
+
+          <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-[40px] p-8 shadow-lg shadow-purple-500/10">
+            <h3 className="text-2xl font-semibold mb-6">
+              Let's Work Together
+            </h3>
+
+            <div className="space-y-4">
+              <input
+                type="text"
+                placeholder="Nama"
+                className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none focus:border-purple-500"
+              />
+
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none focus:border-purple-500"
+              />
+
+              <textarea
+                placeholder="Pesan"
+                rows="5"
+                className="w-full px-5 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none focus:border-purple-500"
+              ></textarea>
+
+              <button className="w-full py-4 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 hover:scale-[1.02] transition">
+                Kirim Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-white/10 py-8 text-center text-gray-400 text-sm">
+        © 2026 Creative Edit • WhatsApp • Instagram • TikTok • Email
+      </footer>
+
+      <a
+        href="https://wa.me/62xxxxxxxxxx?text=Halo,%20saya%20tertarik%20menggunakan%20jasa%20edit%20video%20dan%20desain"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-green-500 flex items-center justify-center text-3xl shadow-2xl shadow-green-500/40 hover:scale-110 transition animate-pulse"
+      >
+        💬
+      </a>
     </div>
-
-    <div class="card">
-      <h2>💰 Harga</h2>
-      <p class="highlight">Mulai under 50K</p>
-      <p>Harga menyesuaikan jenis editan & tingkat kesulitan.</p>
-    </div>
-
-    <div class="card">
-      <h2>⏰ Jam Operasional</h2>
-      <p>Buka setiap hari pukul <span class="highlight">08:00 – 22:00</span></p>
-    </div>
-
-    <div class="card">
-      <h2>✅ Keunggulan</h2>
-      <ul>
-        <li>Include revisi</li>
-        <li>Boleh request konsep/style</li>
-        <li>Upload hingga 8 foto untuk kebutuhan edit</li>
-        <li>Fast respon & hasil estetik</li>
-        <li>Pengerjaan mepet bisa (harga menyesuaikan)</li>
-      </ul>
-
-      <a href="#" class="btn">Pesan Sekarang</a>
-    </div>
-
-  </div>
-
-  <footer>
-    © 2026 Jasa Edit Video & Desain
-  </footer>
-
-</body>
-</html>
+  );
+}
